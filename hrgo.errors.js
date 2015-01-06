@@ -36,7 +36,7 @@
 				ParameterNotFound = 19
 			*/
 
-				switch (data.result) {
+				switch (data.data.result) {
 
 				case '0':
 					return data;
@@ -114,7 +114,7 @@
 					break;
 
 				case '19':
-					SweetAlert.swal('Error', 'The server rejected your request, we could not find a required parameter (' + data.resultMessage + '), please try again.', 'error');
+					SweetAlert.swal('Error', 'The server rejected your request, we could not find a required parameter (' + data.data.resultMessage + '), please try again.', 'error');
 					break;
 
 				default:
